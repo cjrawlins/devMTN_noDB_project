@@ -6,12 +6,20 @@ const port = 5000;
 app.use(express.json());
 
 
-//-----Endpoints-----//
-app.get("/api/events", ctrl.getEvents)
+//---------------Endpoints---------------//
+// Read All Events //
+app.get("/api/events", ctrl.getEvents);
+// Read Single Event
+app.get("/api/events/:id", ctrl.getEvent);
+// Create Event //
+app.post("/api/events", ctrl.createEvent);
+// Update Event //
+app.put("/api/events/:id", ctrl.updateEvent);
+// Delete Event //
+app.delete("/api/events/:id", ctrl.deleteEvent);
 
-// app.post("/api/todos", ctrl.addTodo)
-// app.delete("/api/todos/:id", ctrl.deleteTodo)
-// app.put("/api/todos/complete/:id", ctrl.completeTodo)
+// ---Queries--- //
+app.get("/api/events", ctrl.getEvents);
 
 
 app.listen(port, () => console.log(`Server listening on port: ${port}`));

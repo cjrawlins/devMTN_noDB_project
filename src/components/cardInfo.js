@@ -1,6 +1,7 @@
+import React from 'react';
 import App from '../App';
 import EventList from './EventList';
-import Card from './card';
+import Card from './EventCard';
 
 function cardInfo() {
   return (

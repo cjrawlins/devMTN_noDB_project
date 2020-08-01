@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-main {
+  background-color: lightslategray;
+  height: 100vh;
+  width: 100vw;
+  /* ----For Children---- */
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+}
+
+/*---------- header ---------- */
+.header-wrapper {
+  background-color: grey;
+  height: 100px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content {
+  border: 1px solid white;
+  height: 100px;
+  max-width: 1080px;
+  width: 100vw;
+  /* ----For Children---- */
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-image {
+  border: 1px solid white;
+  height: 80px;
+  width: 120px;
 }
+
+/*---------- main ---------- */
+.main-wrapper {
+  border: 1px solid white;
+  background-color: transparent;
+  height: 300vh;
+  max-width: 1080px;
+  width: 100vw;
+  /* ----For Children---- */
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/*----------EventList Family--------- */
+.EventList-main {
+  border: 1px solid white;
+  /* background-color: lime; */
+  height: 100%;
+  width: 60%;
+  /* ----For Children---- */
+  display: flex;
+
+}
+
+.eventCard-main {
+  background-color: wheat;
+  height: 200px;
+  width: 300px;
+}
+
+
+/*----------Editor Family--------- */
+.Editor-main {
+  border: 1px solid white;
+  /* background-color: red; */
+  height: 100%;
+  width: 40%;
+  /* ----For Children---- */
+  display: flex;
+}
+

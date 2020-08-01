@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
-import App from '../App'
 
 class Editor extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            editor = []
+            
         }
+    }
+
+    render() {
+        
+        return (
+            <div className="Editor-main">
+                <h1>I am the Editor</h1>
+            </div>
+        )
     }
 
 }

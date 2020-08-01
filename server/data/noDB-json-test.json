@@ -100,11 +100,11 @@
 		"eventInfo": {
 			"imageURL": "./media/img_1005.png",
 			"timestamp": "2020-08-01T04:00:05.000Z",
-			"eventStatus": "New", 
-			"eventCat": "Uncategorized",
-			"eventClass": "Unclassified",
-			"objObstructed": null,
-			"notes": ""
+			"eventStatus": "Data Complete", 
+			"eventCat": "Alarm",
+			"eventClass": "Person",
+			"objObstructed": false,
+			"notes": "Test Notes"
 		}
 	}
 ]
