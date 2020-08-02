@@ -1,14 +1,13 @@
 import React from 'react'
-import App from '../App';
-import EventList from './EventList';
-import card from './EventCard'
 
-function eventImage() {
+
+
+function EventImage(props) {
   return (
-    <div className="eventImage-main">
-     
+    <div className="EventImage-main">
+      <img className="card-image" alt="event" src={props.imageURL}></img>
     </div>
   );
 }
 
-export default eventImage;
+export default EventImage;

@@ -2,12 +2,12 @@ import React from 'react';
 import App from '../App';
 import Editor from './Editor';
 
-function editEvent() {
+function EditEvent() {
   return (
-    <div className="editEvent">
+    <div className="EditEvent-main">
      
     </div>
   );
 }
 
-export default editEvent;
+export default EditEvent;

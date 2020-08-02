@@ -6,15 +6,20 @@ class EventList extends Component {
         super(props);
 
         this.state = {
-            
+            eventsList: props.fileEvents
         }
     }
 
     render() {
+       const eventsListMap = this.state.eventsList.map( e => {
+            return <EventCard
+                        cardEvents =  {e}
+                    />
+
+       }  ) 
         return (
             <div className="EventList-main">
-                <h1>editor</h1>
-                <EventCard></EventCard>
+                {eventsListMap}
             </div>
 
         );

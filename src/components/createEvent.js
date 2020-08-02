@@ -2,12 +2,12 @@ import React from 'react';
 import App from '../App';
 import Editor from './Editor';
 
-function createEvent() {
+function CreateEvent() {
   return (
-    <div className="createEvent">
+    <div className="CreateEvent-main">
      
     </div>
   );
 }
 
-export default createEvent;
+export default CreateEvent;
