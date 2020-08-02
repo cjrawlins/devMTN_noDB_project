@@ -17,9 +17,10 @@ class App extends Component {
 
     this.state = {
       allEvents: [],
+      convEvents: [],
       fileEvents: eventsJSON
     }
-
+    //this.convertAllEventsToObj = this.convertAllEventsToObj.bind(this);
     
 }
 
@@ -29,6 +30,13 @@ componentDidMount() {
   
 }
 
+
+// convertAllEventsToObj(data) {
+//   let obj = JSON.parse(data);
+//   console.log(obj)
+//   //this.setState( { convEvents: obj } )
+// }
+
 getAllEvents = () => {
   axios.get('/api/events')
     .then( res => { 
@@ -37,18 +45,41 @@ getAllEvents = () => {
       // console.log(this.state.allEvents);
     } 
     ).catch( err => console.log("Error",err) )
+    // this.convertAllEventsToObj(this.state.allEvents);
 };
+
+compareAPItoFILE = (data1, data2) => {
+  if (data1 === data2) {
+    console.log("Compare === is TRUE");
+  } else if ( data1 == data2 ) {
+    console.log("Compare == is TRUE");
+  } else {
+    console.log("Both are FALSE");
+  }
+
+}
 
 render() {
 
-    //console.log("API Events: ",this.state.allEvents);
+    console.log("----Checking allEvents vs fileEvents-----");
+    this.compareAPItoFILE(this.state.allEvents, this.state.fileEvents);
+
+    console.log("----Checking[1] allEvents vs fileEvents[1]-----");
+    this.compareAPItoFILE(this.state.allEvents[1], this.state.fileEvents[1]);
+
+
+    // console.log("API Events: ",this.state.allEvents);
     console.log("API Events 1: ",this.state.allEvents[0]);
+    //console.log("File Events 1 EventId: ", this.state.allEvents[0].eventId);
+
     
     
-    //console.log("File Events: ", this.state.fileEvents);
+    // console.log("File Events: ", this.state.fileEvents);
     console.log("File Events 1: ", this.state.fileEvents[0]);
-    //console.log("File Events 1 EventId: ", this.state.fileEvents[0].eventId);
+    console.log("File Events 1 EventId: ", this.state.fileEvents[0].eventId);
     //console.log("File Events 2 Camera Name: ", this.state.fileEvents[2].cameraInfo.name);
+
+
 
     return (
     <div className="App-main">
@@ -59,11 +90,11 @@ render() {
         </div>
       </header>
       <main className="main-wrapper">
-        <EventList 
+        <EventList
           allEvents = {this.state.allEvents}
           fileEvents = {this.state.fileEvents}
         />
-        <Editor 
+        <Editor
           allEvents = {this.state.allEvents}
           fileEvents = {this.state.fileEvents}
         />

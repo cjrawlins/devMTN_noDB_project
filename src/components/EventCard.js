@@ -9,7 +9,7 @@ function EventCard(props) {
   let cardId = cardData.eventId;
   let cardTimestamp = cardData.eventInfo.timestamp;
   
-
+  // <h2 className="card-x" onClick={props.deleteCard(cardId)}>X</h2>
   
   return (
     <div className="EventCard-main">

@@ -8,12 +8,15 @@ class EventList extends Component {
         this.state = {
             eventsList: props.fileEvents
         }
+        
     }
 
     render() {
-       const eventsListMap = this.state.eventsList.map( e => {
-            return <EventCard
-                        cardEvents =  {e}
+
+       const eventsListMap = this.state.eventsList.map( function(curr, index) {
+            return <EventCard key={index}
+                        cardEvents =  {curr}
+
                     />
 
        }  ) 

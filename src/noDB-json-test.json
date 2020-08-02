@@ -1,6 +1,6 @@
 [
 	{
-		"eventId": 1000,
+		"eventId": "1000",
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -8,17 +8,17 @@
 			"model": "Axis Q4550-LE"
 		},
 		"eventInfo": {
-			"imageURL": "./media/img_1000.png",
+			"imageURL": "./media/img1000.png",
 			"timestamp": "2020-08-01T04:00:00.000Z",
 			"eventStatus": "New", 
 			"eventCat": "Uncategorized",
 			"eventClass": "Unclassified",
-			"objObstructed": null,
+			"objObstructed": "Unknown",
 			"notes": ""
 		}
 	},
 	{
-		"eventId": 1001,
+		"eventId": "1001",
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -26,17 +26,17 @@
 			"model": "Axis Q4550-LE"
 		},
 		"eventInfo": {
-			"imageURL": "./media/img_1001.png",
+			"imageURL": "./media/img1001.png",
 			"timestamp": "2020-08-01T04:01:00.000Z",
 			"eventStatus": "New", 
 			"eventCat": "Uncategorized",
 			"eventClass": "Unclassified",
-			"objObstructed": null,
+			"objObstructed": "Unknown",
 			"notes": ""
 		}
 	},
 	{
-		"eventId": 1002,
+		"eventId": "1002",
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -44,17 +44,17 @@
 			"model": "Axis Q4550-LE"
 		},
 		"eventInfo": {
-			"imageURL": "./media/img_1002.png",
+			"imageURL": "./media/img1002.png",
 			"timestamp": "2020-08-01T04:00:02.000Z",
 			"eventStatus": "New", 
 			"eventCat": "Uncategorized",
 			"eventClass": "Unclassified",
-			"objObstructed": null,
+			"objObstructed": "Unknown",
 			"notes": ""
 		}
 	},
 	{
-		"eventId": 1003,
+		"eventId": "1003",
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -62,17 +62,17 @@
 			"model": "Axis Q4550-LE"
 		},
 		"eventInfo": {
-			"imageURL": "./media/img_1003.png",
+			"imageURL": "./media/img1003.png",
 			"timestamp": "2020-08-01T04:00:03.000Z",
 			"eventStatus": "New", 
 			"eventCat": "Uncategorized",
 			"eventClass": "Unclassified",
-			"objObstructed": null,
+			"objObstructed": "Unknown",
 			"notes": ""
 		}
 	},
 	{
-		"eventId": 1004,
+		"eventId": "1004",
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -80,17 +80,17 @@
 			"model": "Axis Q4550-LE"
 		},
 		"eventInfo": {
-			"imageURL": "./media/img_1004.png",
+			"imageURL": "./media/img1004.png",
 			"timestamp": "2020-08-01T04:00:04.000Z",
 			"eventStatus": "New", 
 			"eventCat": "Uncategorized",
 			"eventClass": "Unclassified",
-			"objObstructed": null,
+			"objObstructed": "Unknown",
 			"notes": ""
 		}
 	},
 	{
-		"eventId": 1005,
+		"eventId": "1005",
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -98,12 +98,12 @@
 			"model": "Axis Q4550-LE"
 		},
 		"eventInfo": {
-			"imageURL": "./media/img_1005.png",
+			"imageURL": "./media/img1005.png",
 			"timestamp": "2020-08-01T04:00:05.000Z",
 			"eventStatus": "Data Complete", 
 			"eventCat": "Alarm",
 			"eventClass": "Person",
-			"objObstructed": false,
+			"objObstructed": "Unknown",
 			"notes": "Test Notes"
 		}
 	}
