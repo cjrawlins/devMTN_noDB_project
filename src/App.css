@@ -64,7 +64,7 @@
 
 .EventCard-main {
   background-color: grey;
-  height: 200px;
+  height: 250px;
   width: 95%;
   margin-bottom: 20px;
 }
@@ -82,7 +82,7 @@
 
 .CardInfo-main {
   border: 1px solid black;
-  height: 180px;
+  height: 230px;
   width: 55%;
   /* ----For Children---- */
   display: flex;
@@ -128,13 +128,14 @@ display: flex;
 }
 
 .info {
+  border: 1px solid white;
   height: 20%;
   width: 50%;
 }
 
 .EventImage-main {
   border: 1px solid black;
-  height: 180px;
+  height: 230px;
   width: 45%;
   display: flex;
   justify-content: center;
@@ -152,7 +153,42 @@ display: flex;
   /* background-color: red; */
   height: auto;
   width: 40%;
+  padding-top: 20px;
   /* ----For Children---- */
   display: flex;
+  justify-content: center;
 }
 
+.EditEvent-main {
+  background-color: grey;
+  border: 1px solid white;
+  height: 1000px;
+  width: 95%;
+}
+
+/* Editor Header and Image have properties from Card */
+
+.editor-body {
+  /* background-color: aqua; */
+  width: 100%;
+  height: auto;
+  /* ----For Children---- */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.button-container {
+  /* background-color: blueviolet; */
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.editor-buttons {
+  height: 30px;
+  width: 60px;
+}

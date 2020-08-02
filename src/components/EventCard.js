@@ -10,7 +10,6 @@ function EventCard(props) {
   let cardTimestamp = cardData.eventInfo.timestamp;
   
 
-  console.log("Card ID: ", cardId);
   
   return (
     <div className="EventCard-main">

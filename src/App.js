@@ -63,7 +63,10 @@ render() {
           allEvents = {this.state.allEvents}
           fileEvents = {this.state.fileEvents}
         />
-        <Editor />
+        <Editor 
+          allEvents = {this.state.allEvents}
+          fileEvents = {this.state.fileEvents}
+        />
       </main>
     </div>
   )};
