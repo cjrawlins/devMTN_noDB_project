@@ -3,10 +3,22 @@ import React from 'react';
 function EditEvent(props) {
   
   let selectedId = 0;
+  let selectedStatus = "";
+  let selectedCat = "";
+  let selectedClass = ""
+
   
   function getSelectedId() {
     selectedId = document.getElementById("select-eventId").value;
     console.log("Selected ID: ", selectedId);
+  }
+
+  function handleSaveClick() {
+    console.log("Save Button Clicked")
+    selectedStatus = document.getElementById("select-eventStatus").value;
+    selectedCat = document.getElementById("select-eventCat").value;
+    selectedClass = document.getElementById("select-eventClass").value;
+    props.editEvent(selectedId, selectedStatus, selectedCat, selectedClass);
   }
   
   return (
@@ -50,7 +62,7 @@ function EditEvent(props) {
             </select>
             
             <h6 className="info info-title">Select Status:</h6>
-            <select className="editor-selectId info info-data">
+            <select className="editor-selectId info info-data" id="select-eventStatus">
                 <option value={props.eventStatusOptions[0]}>{props.eventStatusOptions[0]}</option>
                 <option value={props.eventStatusOptions[1]}>{props.eventStatusOptions[1]}</option>
                 <option value={props.eventStatusOptions[2]}>{props.eventStatusOptions[2]}</option>
@@ -58,7 +70,7 @@ function EditEvent(props) {
             </select>
             
             <h6 className="info info-title">Select Category:</h6>
-            <select className="editor-selectId info info-data">
+            <select className="editor-selectId info info-data" id="select-eventCat">
                 <option value={props.eventCatOptions[0]}>{props.eventCatOptions[0]}</option>
                 <option value={props.eventCatOptions[1]}>{props.eventCatOptions[1]}</option>
                 <option value={props.eventCatOptions[2]}>{props.eventCatOptions[2]}</option>
@@ -68,7 +80,7 @@ function EditEvent(props) {
             </select>
             
             <h6 className="info info-title">Select Classification:</h6>
-            <select className="editor-selectId info info-data">
+            <select className="editor-selectId info info-data" id="select-eventClass">
                 <option value={props.eventClassOptions[0]}>{props.eventClassOptions[0]}</option>
                 <option value={props.eventClassOptions[1]}>{props.eventClassOptions[1]}</option>
                 <option value={props.eventClassOptions[2]}>{props.eventClassOptions[2]}</option>
@@ -78,7 +90,7 @@ function EditEvent(props) {
             </select>
         </div>
         <div className="button-container">
-          <button className="editor-buttons">Save</button>
+          <button className="editor-buttons" onClick={handleSaveClick} >Save</button>
           <button className="editor-buttons">Cancel</button>
           <button className="editor-buttons" onClick={ () => props.deleteEvent(selectedId)}>Delete</button>
         </div>

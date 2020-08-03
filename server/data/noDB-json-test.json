@@ -1,6 +1,6 @@
 [
 	{
-		"eventId": "1000",
+		"eventId": 1000,
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -18,7 +18,7 @@
 		}
 	},
 	{
-		"eventId": "1001",
+		"eventId": 1001,
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -36,7 +36,7 @@
 		}
 	},
 	{
-		"eventId": "1002",
+		"eventId": 1002,
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -54,7 +54,7 @@
 		}
 	},
 	{
-		"eventId": "1003",
+		"eventId": 1003,
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -72,7 +72,7 @@
 		}
 	},
 	{
-		"eventId": "1004",
+		"eventId": 1004,
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",
@@ -90,7 +90,7 @@
 		}
 	},
 	{
-		"eventId": "1005",
+		"eventId": 1005,
 		"cameraInfo": {
 			"name": "NW Building",
 			"ip": "192.168.1.110",

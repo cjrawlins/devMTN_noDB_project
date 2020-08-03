@@ -13,6 +13,8 @@ class EventList extends Component {
 
     render() {
 
+
+
        const eventsListMap = this.state.eventsList.map( function(curr, index) {
             return <EventCard key={index}
                         cardEvents =  {curr}

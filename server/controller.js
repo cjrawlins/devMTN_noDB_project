@@ -1,7 +1,5 @@
-//const events = require('./data/noDB-json-test.json');
 const events = require('./data/noDB-json-test.json');
 
-let id = 1100;
 
 module.exports = {
     
@@ -11,29 +9,30 @@ module.exports = {
     },
 
     getEvent: (req, res) => {
-        // console.log("---API Call GET Event---");
-        // const { id } = req.params;
-        // let found = false;
-        // let singleEvent = {};
-        // const index = parseInt(req.params.id);
-        // // Find index of passed param
-        // for (i = 0 ; i < events.length; i++ ) {
-        //     if ( events[i].eventId == index ) { 
-        //         //events.splice(i, 1, eventData);
-        //         //singleEvent = events[index].eventId;
-        //         console.log("Single Event: ",singleEvent.eventId);
-        //         console.log(`Event ${index} found at index ${i} and updated`);
-        //         res.status(200).send( { events[i] } );
-        //         found = true;
-        //     }    
-        // } // Report if found and send status
-        // if (found === true ) { 
-        //     console.log("found");
-        //     //res.status(200).send(singleEvent) 
-        // } else { 
-        //     res.status(404).send('Task Not Found'); 
-        //     console.log(`Task ${index} Not Found`);
-        // }
+        console.log("---API Call GET Event---");
+        const { id } = req.params;
+        console.log(`Looking for Event ${id}`);
+        let found = false;
+        let singleEvent = {};
+        const index = parseInt(req.params.id);
+        // Find index of passed param
+        for (i = 0 ; i < events.length; i++ ) {
+            if ( events[i].eventId == index ) { 
+                //events.splice(i, 1, eventData);
+                //singleEvent = events[index].eventId;
+                console.log("Single Event: ",singleEvent.eventId);
+                console.log(`Event ${index} found at index ${i} and updated`);
+                res.status(200).send(events);
+                found = true;
+            }    
+        } // Report if found and send status
+        if (found === true ) { 
+            console.log("found");
+            //res.status(200).send(singleEvent) 
+        } else { 
+            res.status(404).send('Event Not Found'); 
+            console.log(`Event ${index} Not Found`);
+        }
     },
     
     createEvent: (req, res) => { // Needs to auto update ID -Do later
@@ -50,6 +49,7 @@ module.exports = {
         console.log("---API Call Update Event---");
         let found = false;
         const eventData = req.body;
+        console.log("Request Body: ", eventData)
         const index = parseInt(req.params.id);
         // Find index of passed param
         for (i = 0 ; i < events.length; i++ ) {

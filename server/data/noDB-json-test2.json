@@ -1,77 +1,263 @@
-[
-	{
-		"eventId": 1000,
-		"name": "NW Building",
-		"ip": "192.168.1.110",
-		"location": "Corp. Campus",
-		"model": "Axis Q4550-LE",
-		"imageURL": "./media/img_1000.png",
-		"timestamp": "2020-08-01T04:00:00.000Z",
-		"eventStatus": "New", 
-		"eventCat": "Uncategorized",
-		"eventClass": "Unclassified",
-		"objObstructed": null,
-		"notes": ""
-
-	},
-	{
-		"eventId": 1001,
-		"name": "NW Building",
-		"ip": "192.168.1.110",
-		"location": "Corp. Campus",
-		"model": "Axis Q4550-LE",
-		"imageURL": "./media/img_1000.png",
-		"timestamp": "2020-08-01T04:00:00.000Z",
-		"eventStatus": "New", 
-		"eventCat": "Uncategorized",
-		"eventClass": "Unclassified",
-		"objObstructed": null,
-		"notes": ""
-
-	},
-	{
-		"eventId": 1002,
-		"name": "NW Building",
-		"ip": "192.168.1.110",
-		"location": "Corp. Campus",
-		"model": "Axis Q4550-LE",
-		"imageURL": "./media/img_1000.png",
-		"timestamp": "2020-08-01T04:00:00.000Z",
-		"eventStatus": "New", 
-		"eventCat": "Uncategorized",
-		"eventClass": "Unclassified",
-		"objObstructed": null,
-		"notes": ""
-
-	},
-	{
-		"eventId": 1003,
-		"name": "NW Building",
-		"ip": "192.168.1.110",
-		"location": "Corp. Campus",
-		"model": "Axis Q4550-LE",
-		"imageURL": "./media/img_1000.png",
-		"timestamp": "2020-08-01T04:00:00.000Z",
-		"eventStatus": "New", 
-		"eventCat": "Uncategorized",
-		"eventClass": "Unclassified",
-		"objObstructed": null,
-		"notes": ""
-
-	},
-	{
-		"eventId": 1004,
-		"name": "NW Building",
-		"ip": "192.168.1.110",
-		"location": "Corp. Campus",
-		"model": "Axis Q4550-LE",
-		"imageURL": "./media/img_1000.png",
-		"timestamp": "2020-08-01T04:00:00.000Z",
-		"eventStatus": "New", 
-		"eventCat": "Uncategorized",
-		"eventClass": "Unclassified",
-		"objObstructed": null,
-		"notes": ""
-
-	}
-]
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "array",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": [],
+    "examples": [
+        [
+            {
+                "eventId": 1000,
+                "cameraInfo": {
+                    "name": "NW Building",
+                    "ip": "192.168.1.110",
+                    "location": "Corp. Campus",
+                    "model": "Axis Q4550-LE"
+                },
+                "eventInfo": {
+                    "imageURL": "./media/img1000.png",
+                    "timestamp": "2020-08-01T04:00:00.000Z",
+                    "eventStatus": "New",
+                    "eventCat": "Uncategorized",
+                    "eventClass": "Unclassified",
+                    "objObstructed": "Unknown",
+                    "notes": ""
+                }
+            },
+            {
+                "eventId": 1001,
+                "cameraInfo": {
+                    "name": "NW Building",
+                    "ip": "192.168.1.110",
+                    "location": "Corp. Campus",
+                    "model": "Axis Q4550-LE"
+                },
+                "eventInfo": {
+                    "imageURL": "./media/img1001.png",
+                    "timestamp": "2020-08-01T04:01:00.000Z",
+                    "eventStatus": "New",
+                    "eventCat": "Uncategorized",
+                    "eventClass": "Unclassified",
+                    "objObstructed": "Unknown",
+                    "notes": ""
+                }
+            }
+        ]
+    ],
+    "additionalItems": true,
+    "items": {
+        "$id": "#/items",
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                    {
+                        "eventId": 1000,
+                        "cameraInfo": {
+                            "name": "NW Building",
+                            "ip": "192.168.1.110",
+                            "location": "Corp. Campus",
+                            "model": "Axis Q4550-LE"
+                        },
+                        "eventInfo": {
+                            "imageURL": "./media/img1000.png",
+                            "timestamp": "2020-08-01T04:00:00.000Z",
+                            "eventStatus": "New",
+                            "eventCat": "Uncategorized",
+                            "eventClass": "Unclassified",
+                            "objObstructed": "Unknown",
+                            "notes": ""
+                        }
+                    }
+                ],
+                "required": [
+                    "eventId",
+                    "cameraInfo",
+                    "eventInfo"
+                ],
+                "properties": {
+                    "eventId": {
+                        "$id": "#/items/anyOf/0/properties/eventId",
+                        "type": "integer",
+                        "title": "The eventId schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                            1000
+                        ]
+                    },
+                    "cameraInfo": {
+                        "$id": "#/items/anyOf/0/properties/cameraInfo",
+                        "type": "object",
+                        "title": "The cameraInfo schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "name": "NW Building",
+                                "ip": "192.168.1.110",
+                                "location": "Corp. Campus",
+                                "model": "Axis Q4550-LE"
+                            }
+                        ],
+                        "required": [
+                            "name",
+                            "ip",
+                            "location",
+                            "model"
+                        ],
+                        "properties": {
+                            "name": {
+                                "$id": "#/items/anyOf/0/properties/cameraInfo/properties/name",
+                                "type": "string",
+                                "title": "The name schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "NW Building"
+                                ]
+                            },
+                            "ip": {
+                                "$id": "#/items/anyOf/0/properties/cameraInfo/properties/ip",
+                                "type": "string",
+                                "title": "The ip schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "192.168.1.110"
+                                ]
+                            },
+                            "location": {
+                                "$id": "#/items/anyOf/0/properties/cameraInfo/properties/location",
+                                "type": "string",
+                                "title": "The location schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Corp. Campus"
+                                ]
+                            },
+                            "model": {
+                                "$id": "#/items/anyOf/0/properties/cameraInfo/properties/model",
+                                "type": "string",
+                                "title": "The model schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Axis Q4550-LE"
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    },
+                    "eventInfo": {
+                        "$id": "#/items/anyOf/0/properties/eventInfo",
+                        "type": "object",
+                        "title": "The eventInfo schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "imageURL": "./media/img1000.png",
+                                "timestamp": "2020-08-01T04:00:00.000Z",
+                                "eventStatus": "New",
+                                "eventCat": "Uncategorized",
+                                "eventClass": "Unclassified",
+                                "objObstructed": "Unknown",
+                                "notes": ""
+                            }
+                        ],
+                        "required": [
+                            "imageURL",
+                            "timestamp",
+                            "eventStatus",
+                            "eventCat",
+                            "eventClass",
+                            "objObstructed",
+                            "notes"
+                        ],
+                        "properties": {
+                            "imageURL": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/imageURL",
+                                "type": "string",
+                                "title": "The imageURL schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "./media/img1000.png"
+                                ]
+                            },
+                            "timestamp": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/timestamp",
+                                "type": "string",
+                                "title": "The timestamp schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "2020-08-01T04:00:00.000Z"
+                                ]
+                            },
+                            "eventStatus": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/eventStatus",
+                                "type": "string",
+                                "title": "The eventStatus schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "New"
+                                ]
+                            },
+                            "eventCat": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/eventCat",
+                                "type": "string",
+                                "title": "The eventCat schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Uncategorized"
+                                ]
+                            },
+                            "eventClass": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/eventClass",
+                                "type": "string",
+                                "title": "The eventClass schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Unclassified"
+                                ]
+                            },
+                            "objObstructed": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/objObstructed",
+                                "type": "string",
+                                "title": "The objObstructed schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Unknown"
+                                ]
+                            },
+                            "notes": {
+                                "$id": "#/items/anyOf/0/properties/eventInfo/properties/notes",
+                                "type": "string",
+                                "title": "The notes schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    ""
+                                ]
+                            }
+                        },
+                        "additionalProperties": true
+                    }
+                },
+                "additionalProperties": true
+            }
+        ]
+    }
+}
